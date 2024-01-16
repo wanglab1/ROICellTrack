@@ -1,5 +1,5 @@
 # ROICellTrack
-Advanced cellular and subcellular analysis using GeoMx ROI images
+A toolkit for advanced cellular and subcellular analysis using GeoMx ROI images
 
 ## Introduction
 Mini-bulk or single-spot spatial transcriptomic technologies, such as GeoMX Digital Spatial Profiler (DSP), have revolutionized our ability to probe spatial heterogeneity and examine transcripts at a subcellular level. However, in most GeoMX DSP studies, the spatial information obtained from multiplex immunofluorescence imaging has been primarily used for identifying the regions of interest (ROI), rather than as an integral part of the downstream transcriptomic data interpretation. To fix this missed opportunity, we developed an analytical framework to fully leverage the rich spatial context provided by the in situ imaging modality. 
