@@ -1,4 +1,9 @@
 # ROICellTrack
+
+<p align="center">
+  <img width="200"  src="https://github.com/sqjin/CellChat/blob/master/CellChat_Logo.png">
+</p>
+
 A toolkit for advanced cellular and subcellular analysis using GeoMx ROI images
 
 ## Introduction
