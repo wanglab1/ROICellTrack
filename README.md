@@ -1,7 +1,7 @@
 # ROICellTrack
 
 <p align="center">
-  <img width="300"  src="https://github.com/wanglab1/ROICellTrack/blob/main/misc/logo.png">
+  <img width="200"  src="https://github.com/wanglab1/ROICellTrack/blob/main/misc/logo.png">
 </p>
 
 A toolkit for advanced cellular and subcellular analysis using GeoMx ROI images
