@@ -62,6 +62,8 @@ for input_file in tiff_files:
         perimeters = []
         areas = []
         circularities = []
+        coord_x= []
+        coord_y= []
         
         # 3. Iterate through each cell and calculate average intensities
         for cell_id in unique_cells:
@@ -89,6 +91,10 @@ for input_file in tiff_files:
             area = cv2.contourArea(contours[0])
             circularity = (4 * np.pi * area) / (perimeter ** 2) if perimeter > 0 else 0
             #
+             #y, x coordinates
+            y, x = np.where(masks == cell_id)
+            center_y, center_x = np.mean(y), np.mean(x)
+            #
             green_intensities.append(green_avg_intensity)
             red_intensities.append(red_avg_intensity)
             blue_intensities.append(blue_avg_intensity)
@@ -96,14 +102,16 @@ for input_file in tiff_files:
             perimeters.append(perimeter)
             areas.append(area)
             circularities.append(circularity)
+            coord_y.append(center_y)
+            coord_x.append(center_x)
             #
         # 4. Plot density plot (optional)
         #
-        return green_intensities, red_intensities, blue_intensities, Npis, perimeters, areas, circularities
-
+        return green_intensities, red_intensities, blue_intensities, Npis, perimeters, areas, circularities, coord_y, coord_x
+    #
     # Call the function with your image and masks data
-    green_intensities, red_intensities, blue_intensities, Npis, perimeters, areas, circularities = extract_intensities_and_plot(image, masks)
-
+    green_intensities, red_intensities, blue_intensities, Npis, perimeters, areas, circularities, coord_y, coord_x = extract_intensities_and_plot(image, masks)
+    #
     #output as DataFrame
     cell_stat = {
         'R_Int': red_intensities,
@@ -112,12 +120,14 @@ for input_file in tiff_files:
         'Pixels': Npis,
         'Perimeter': perimeters,
         'Area': areas,
-        'Circularity': circularities
+        'Circularity': circularities,
+        'X_coordinate': coord_x,
+        'Y_coordinate': coord_y
     }
     cell_stat = pd.DataFrame(cell_stat)
     #print(cell_stat)
-
-
+    cell_stat.to_csv(f"{output_dir}{sid}.cell_stat.csv", index=False)
+    #
     #############################################################BLOCK2.1
     #first visualization output blow
     plt.figure(figsize=(6, 3))
@@ -166,8 +176,8 @@ for input_file in tiff_files:
             cell_region = green_channel[masks == cell_id]
             avg_intensity = np.mean(cell_region)
             
-            # Mark the cell based on the intensity (use the benchmarked cutoff or clustering 15-40)
-            if avg_intensity > 15:
+            # Mark the cell based on the intensity (use the benchmarked cutoff or clustering 15-40) <<<<<
+            if avg_intensity > 20:
                 marked_mask[masks == cell_id] = 2  # Mark cancer cells as 2
                 cancer_cells_count += 1
             else:
