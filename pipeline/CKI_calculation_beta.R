@@ -89,7 +89,7 @@ crossing_of_crossK_from_Kcross <- function(kcross_result) {
 #read in csv output files from ROICellTrack Step 2
 cell_stat<- read.csv("Patient 1 - 03-Up-TuSt Im+.tiff.cell_stat.csv")
 colors <- ifelse(cell_stat$G_Int > 15, "red", "black") # Red for G_Int > 15, black otherwise
-# Plot with conditions, reversing the Y-axis to correct the vertical flip
+# Plot with coordinates, reversing the Y-axis (correct if there is vertical flip)
 plot(cell_stat$X_coordinate, cell_stat$Y_coordinate, col = colors,
      xlab = "X Coordinate", ylab = "Y Coordinate",
      main = "Spatial Distribution of Cells with G_Int > 15 Highlighted",
