@@ -1,5 +1,6 @@
-##R functions to calculate Cross K intersection (CKI)
-##https://www.nature.com/articles/s41467-023-37822-0
+
+##R functions to calculate spatial statistics such as Cross K intersection (CKI) based on the Step2 output.
+##Reference: https://www.nature.com/articles/s41467-023-37822-0
 
 library(spatstat)
 
@@ -84,17 +85,32 @@ crossing_of_crossK_from_Kcross <- function(kcross_result) {
     return(NULL)
 }
 
+#####################################################################
+#read in csv output files from ROICellTrack Step 2
+cell_stat<- read.csv("Patient 1 - 03-Up-TuSt Im+.tiff.cell_stat.csv")
+colors <- ifelse(cell_stat$G_Int > 15, "red", "black") # Red for G_Int > 15, black otherwise
+# Plot with conditions, reversing the Y-axis to correct the vertical flip
+plot(cell_stat$X_coordinate, cell_stat$Y_coordinate, col = colors,
+     xlab = "X Coordinate", ylab = "Y Coordinate",
+     main = "Spatial Distribution of Cells with G_Int > 15 Highlighted",
+     ylim = rev(range(cell_stat$Y_coordinate))) # Reverse the Y axis to correct flip
 
-all_cells_coords <- read.csv('all_cells_coords.csv')
-green_cells_coords <- read.csv('green_cells_coords.csv')
+
+#load R functions from ROICellTrack github
+all_cells_coords <- data.frame(x=cell_stat$X_coordinate,y=cell_stat$Y_coordinate)
+green_stat<- cell_stat[cell_stat$G_Int>15,] #cancer cells cutoff
+green_cells_coords <- data.frame(x=green_stat$X_coordinate,y=green_stat$Y_coordinate)
 kcross_result <- calculate_Kcross_from_coords(all_cells_coords, green_cells_coords)
-
 plot(kcross_result)
 auc_value <- calculate_AUC_from_Kcross(kcross_result)
 cki_value <- crossing_of_crossK_from_Kcross(kcross_result)
 
 
-#####################################################################
+
+
+
+
+################Other functions##########
 #test (random mixed sample )
 # Number of points to generate
 num_points <- 1000
@@ -120,8 +136,7 @@ auc_value
 cki_value <- crossing_of_crossK_from_Kcross(kcross_result)
 
 
-
-#####################################################################
+################Other functions##########
 generate_moderate_noisy_ring_pattern <- function(center=c(500, 500), inner_radius=120, outer_radius=130, 
                                                 num_tumor_cells=700, num_immune_cells=200) {
     # Generate tumor cells with moderate noise around the center
@@ -170,7 +185,3 @@ plot(kcross_result)
 auc_value <- calculate_AUC_from_Kcross(kcross_result)
 auc_value
 cki_value <- crossing_of_crossK_from_Kcross(kcross_result)
-
-
-
-
