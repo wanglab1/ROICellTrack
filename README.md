@@ -22,3 +22,11 @@ Mini-bulk or single-spot spatial transcriptomic technologies, such as GeoMX Digi
 </code>
 </pre>
 
+```md
+(ROICellTrack)
+├── Pipeline
+│   ├── A. ROI cropping and processing
+│   ├── B. ROI visualization
+│   ├── C. ROI segmentation
+│   └── D. CKI calculation
+```
