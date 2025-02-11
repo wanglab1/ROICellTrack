@@ -21,3 +21,20 @@ Mini-bulk or single-spot spatial transcriptomic technologies, such as GeoMX Digi
        ├── D. CKI calculation
 </code>
 </pre>
+
+
+
+new_folder
+my-app/
+├─ node_modules/
+├─ favicon.ico
+├─ public/
+│  ├─ index.html
+│  ├─ robots.txt
+├─ src/
+│  ├─ index.css
+│  ├─ index.js
+├─ .gitignore
+├─ package.json
+├─ README.md
+new_folder/
