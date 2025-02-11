@@ -11,5 +11,6 @@ Mini-bulk or single-spot spatial transcriptomic technologies, such as GeoMX Digi
 
 ## Pipeline structure
 (ROICellTrack)
-``` ├── Pipeline ```
-```  └── ROI image processing ```
+├── density
+│   └── gene
+│       ├── data
