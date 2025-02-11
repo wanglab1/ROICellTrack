@@ -19,5 +19,5 @@ Mini-bulk or single-spot spatial transcriptomic technologies, such as GeoMX Digi
        ├── C. ROI segmentation
        └── D. CKI calculation
 </code>
-</pre>
 Instructions and examples can be found at each pipeline folder. 
+</pre>
