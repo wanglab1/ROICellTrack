@@ -20,3 +20,4 @@ Mini-bulk or single-spot spatial transcriptomic technologies, such as GeoMX Digi
        └── D. CKI calculation
 </code>
 </pre>
+Instructions and examples can be found at each pipeline folder. 
