@@ -21,3 +21,7 @@ Mini-bulk or single-spot spatial transcriptomic technologies, such as GeoMX Digi
 </code>
 Instructions and examples can be found at each pipeline folder. 
 </pre>
+
+
+## Reference
+Song X. et al. ROICellTrack: A deep learning framework for harnessing cellular imaging modalities in subcellular spatial transcriptomic profiling of tumor tissues. (Under Revision). 
