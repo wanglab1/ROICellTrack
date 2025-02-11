@@ -23,5 +23,5 @@ Instructions and examples can be found at each pipeline folder.
 </pre>
 
 
-## Reference
-Song X. et al. ROICellTrack: A deep learning framework for harnessing cellular imaging modalities in subcellular spatial transcriptomic profiling of tumor tissues. (Under Revision). 
+## References
+Song X. et al. ROICellTrack: A deep learning framework for harnessing cellular imaging modalities in subcellular spatial transcriptomic profiling of tumor tissues. (Manuscript Under Revision). 
