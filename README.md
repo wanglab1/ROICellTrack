@@ -23,7 +23,7 @@ Instructions and examples can be found at each pipeline folder.
 </pre>
 
 ## Installation and requirements
-  Please create a local folder named ROICellTrack and download all the necessary files. Place the example data as well all python scripts directly in the main directory of ROICellTrack.
+  Please create a local folder named ROICellTrack and download all the necessary files. Place the example data as well all python scripts directly in the main directory of ROICellTrack. Follow the example code in the Jupyter Notebook in each folder for implementations. 
   
   Required python packages:
   - opencv-python
