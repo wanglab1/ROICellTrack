@@ -1,6 +1,6 @@
 ## Notes on Using QuPath for GeoMx ROI Image Segmentation
 
-QuPath offers an interactive and alternative approach to cell segmentation. However, there are a few important considerations when using QuPath for GeoMx ROI image segmentation:
+QuPath offers an interactive and alternative approach to cell segmentation. There are a few important considerations when using QuPath for GeoMx ROI image segmentation:
 
 1. Pixel Width and Height Adjustment
 
@@ -9,10 +9,10 @@ QuPath offers an interactive and alternative approach to cell segmentation. Howe
 
 2. Key Parameters in "Positive Cell Detection"
 
-- The Threshold in the Intensity parameters is the primary tuning parameter; a value of 15 was used in this study.
+- The Threshold in the Intensity parameters is the primary tuning parameter; a value of 15 was used in analyzing the public data this study.
 - The Intensity threshold parameters for "Threshold 1+", "2+" should also be fine-tuned. Suggested values include 10/20/30 or 20/30/40.
 
-3. Comparison with Cellpose
+3. Comparison with cellpose
 
 - QuPath tends to detect fewer cells compared to Cellpose.
 - Cells near the ROI margins are more likely to be falsely classified as positive.
