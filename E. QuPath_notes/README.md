@@ -15,7 +15,7 @@ QuPath offers an interactive and alternative approach to cell segmentation. Ther
 3. Comparison with cellpose
 
 - QuPath tends to detect fewer cells compared to Cellpose.
-- Cells near the ROI margins are more likely to be falsely classified as positive.
+- Cells near the ROI margins are more likely to be falsely classified as positive. For example, the resuts shown in the screenshot below. 
 
 
 
