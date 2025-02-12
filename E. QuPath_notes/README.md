@@ -4,8 +4,8 @@ QuPath offers an interactive and alternative approach to cell segmentation. Howe
 
 1. Pixel Width and Height Adjustment
 
-Pixel width and Pixel height must be adjusted to ensure accurate scaling and alignment with the ROI image.
-For GeoMx ROI outputs, a pixel size of 0.40 µm is recommended.
+- Pixel width and Pixel height must be adjusted to ensure accurate scaling and alignment with the ROI image.
+- For GeoMx ROI outputs, a pixel size of 0.40 µm is recommended.
 
 2. Key Parameters in "Positive Cell Detection"
 
