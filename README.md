@@ -27,7 +27,18 @@ Instructions and examples can be found at each pipeline folder.
   
   Required python packages:
   - opencv-python
-  - cellpose (>2.0); 
+  - cellpose (>2.0)
+  - matplotlib
+  - pillow (optional)
+  - tifffile
+  - seaborn
+  - scikit-learn
+  - pandas
+
+  R packages (only needed for CKI calculation):
+  - spatstat
+  - pracma
+  - ggplot2
 
 ## References
 Song X, Yu X, Moran-Segura CM, Li T, Davis JT, Grass GD, Li R, and Wang X. ROICellTrack: A deep learning framework for harnessing cellular imaging modalities in subcellular spatial transcriptomic profiling of tumor tissues. (Manuscript Under Revision). 
