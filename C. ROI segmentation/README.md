@@ -1,4 +1,4 @@
-## Main ROICellTrack functions
+## Main module of ROICellTrack
 
 1. For single sample processing, please follow `StepC_CellSeg_single_sample.ipynb` (Also outputs cell-level morphological features *cell_stat*, which are useful for downstream analysis). 
 
