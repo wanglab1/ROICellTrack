@@ -24,6 +24,8 @@ Instructions and examples can be found at each pipeline folder.
 
 ## Installation and requirements
   Please create a local folder named ROICellTrack and download all the necessary files. Place the example data as well all python scripts directly in the main directory of ROICellTrack.
+  Required python packages:
+  opencv-python; cellpose (>2.0); 
 
 ## References
 Song X, Yu X, Moran-Segura CM, Li T, Davis JT, Grass GD, Li R, and Wang X. ROICellTrack: A deep learning framework for harnessing cellular imaging modalities in subcellular spatial transcriptomic profiling of tumor tissues. (Manuscript Under Revision). 
