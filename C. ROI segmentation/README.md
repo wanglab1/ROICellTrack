@@ -1,6 +1,6 @@
 ## Main modules of ROICellTrack
 
-1. For single sample processing, please follow `StepC_CellSeg_single_sample.ipynb` (Also outputs cell-level morphological features *cell_stat*, which are useful for downstream analysis). 
+1. For single sample processing, please follow [`StepC_CellSeg_single_sample.ipynb`](https://github.com/wanglab1/ROICellTrack/blob/35c5587b057afd5fb5210347406f74b118546149/C.%20ROI%20segmentation/StepC_CellSeg_single_sample.ipynb) (Also outputs cell-level morphological features *cell_stat*, which are useful for downstream analysis). 
 
 2. For multiple samples, please follow `StepC_CellSeg_segmenation_batch.py` (need to specify *input_dir* and *output_dir*)
 
