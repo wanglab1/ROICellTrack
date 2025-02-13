@@ -4,4 +4,4 @@
 
 2. For multiple samples, please follow `StepC_CellSeg_segmenation_batch.py` (need to specify *input_dir* and *output_dir*)
 
-3. For cases where mask file is used to call positive cells, please follow `StepC_CellSeg_ss_mask_pos.ipynb`. This is very useful when the positive cells cannot be called easily based on RGB colors (such as yellow or pink colors).
+3. For cases where mask file is used to call positive cells, please follow [`StepC_CellSeg_ss_mask_pos.ipynb`](https://github.com/wanglab1/ROICellTrack/blob/1adaae763c8ef0f10c689d6d09e7a09a4fb64906/C.%20ROI%20segmentation/StepC_CellSeg_ss_mask_pos.ipynb). This is very useful when the positive cells cannot be called easily based on RGB colors (such as yellow or pink colors).
